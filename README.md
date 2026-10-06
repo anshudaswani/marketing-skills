@@ -1,23 +1,41 @@
 # marketing-skills
 
-Judgment, written down so an agent can run it.
+My marketing method, written down so an agent can run it.
 
-These are the instruction files I use with Claude to do recurring marketing and career work the same way every time. Each one is a `SKILL.md`: a short description of when it applies, then the procedure, the rules, and the output format. They run inside Claude (Cowork, Claude Code, or the API) and most would port to any agent that takes a system prompt.
+Four pillars. Each one holds skills: instruction files Claude runs, with a sample input and a sample output on a real company built from publicly available information. The SKILL.md shows how I think about a problem. The sample output shows whether the thinking holds.
 
-The point is not the prompts. It's that the decisions are made once, in writing, and then held to.
+The method stays separate from any company's context. The frameworks, decision criteria and rubrics live here. A company's product knowledge, customer calls and brand rules get plugged in as context when a skill runs, and come out again when I leave. The judgment is portable. The data is not.
 
-## The skills
+## The pillars
 
-**[interview-read](skills/interview-read/SKILL.md)** reads an interview transcript where you are the candidate and does two jobs: logs the one to four moments that actually tested you, and matches each to a standing set of coaching patterns. The hard rule is to under-create patterns. A behavior earns a name when it shows up across calls, not once.
+**Deep Understanding.** Know what is true before saying anything.
+[market-context](deep-understanding/market-context/SKILL.md): a company, its buyers, its competitors and its market, in a short memo that ends in a thesis someone could argue with. Sample output: [Creatify](deep-understanding/market-context/examples/creatify/memo.md). Later: signal-miner, which turns sales calls, reviews and support threads into recurring pains, exact customer language and hooks.
 
-**[interview-prep](skills/interview-prep/SKILL.md)** takes a job description plus your FAQ bank, your patterns and your recent moments, and writes the eight to twelve questions that interview is most likely to ask, with answers in your voice. It identifies the gap this particular role exposes and writes the three-sentence bridge for it.
+**Market Translation.** Turn understanding into a position.
+positioning, coming next: category framing, the value proposition, message hierarchy, proof points, objections, and the few ideas the company should become known for. Built on the market-context output, same test company.
 
-**[writing-style](skills/writing-style/SKILL.md)** is the profile that keeps drafts sounding like me rather than like a model. Included as a worked example of how to build one: the through-line, hard rules, the words I reach for, and what to avoid sounding like. Replace the specifics with yours.
+**Infrastructure.** Turn the position into what to do now.
+gtm-prioritization, after that: the three things that matter in the next 90 days, why, what is deliberately not being done, and the signals that would change the plan.
+
+**Narrative Coherence.** Keep every output sounding like one company.
+[writing-style](narrative-coherence/writing-style/SKILL.md): the profile that keeps drafts sounding like me rather than like a model. Included as a worked example of how to build one. Later: content-engine, which starts from the approved point of view and customer language, not from a blank prompt.
+
+## The one check that runs on everything
+
+[genericness-check](evaluators/genericness-check/SKILL.md). Could a competitor have published this? If yes, send it back.
+
+## Order of work
+
+Market context → positioning → prioritization. Understand what is true, decide what it means, decide what to do. Content is an output of the system, not the system.
+
+One rule I hold myself to: the next skill does not get built until the last sample output is good enough to send to a hiring manager without a cover note.
+
+## Also here
+
+[career](career/): the interview-read and interview-prep skills. They read my real interview transcripts, log what tested me, and prep the next one from a standing bank of answers. Same method, pointed at my own job search. They run live inside a private app.
 
 ## Using them
 
-Drop a skill folder into your Claude skills directory, or paste the `SKILL.md` body as a system prompt. Each file says what it needs as input. None of them need a database; the interview skills are written against a simple schema (moments, patterns, a processed ledger) that you can keep in a spreadsheet if you want.
-
-The interview skills run live inside [the-ad-standard](https://github.com/anshudaswani/the-ad-standard), where they're wired to Supabase edge functions.
+Drop a skill folder into your Claude skills directory, or paste the SKILL.md body as a system prompt. Each file says what it needs as input. MIT licensed.
 
 [Anshu Daswani](https://anshudaswani.com)
