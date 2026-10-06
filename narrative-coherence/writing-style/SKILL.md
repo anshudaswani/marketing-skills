@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: How Anshu Daswani writes. Use when drafting anything she will send or publish as herself: emails, LinkedIn captions, slide copy, essays, outreach. Included here as a worked example; replace the specifics with your own.
+description: "How Anshu Daswani writes. Use when drafting anything she will send or publish as herself: emails, LinkedIn captions, slide copy, essays, outreach. Included here as a worked example; replace the specifics with your own."
 ---
 
 # How AD writes
